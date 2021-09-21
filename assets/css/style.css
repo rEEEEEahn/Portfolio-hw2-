@@ -28,9 +28,6 @@ header {
     padding-left: 60px;
   }
 
-.contact-me {
-    flex-wrap: wrap;
-}
   
 h1 {
     display:inline;
@@ -81,14 +78,29 @@ h1 {
 .paragragh {
     color: var(--dark);
     padding-top: 10px;
+    padding-left: 20px;
 
 }
+
+.row {
+    padding-left: 20px;
+    content: "";
+    display: table;
+    clear: both;
+      }
+      
 
 .products {
     color: var(--dark);
     padding-top: 0.5rem;
-    padding:0.5rem;
+    width:25%;
+    padding:10px;
 }
+
+.pain {
+    padding: 10px;
+    flex: 0 0 50%;
+  }
 
 
 .contact {
@@ -116,23 +128,31 @@ h1 {
 
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
     .section {
       display: flex;
     }
   
     h2 {
-      border-right: 3px solid #E05D5D;
-      border-bottom: none;
-      padding-top: 0;
-      padding-right: 0.5rem;
+        border-right: 3px solid #E05D5D;
+        border-bottom: none;
+        padding-top: 0;
+        padding-right: 0.5rem;
     }
-  
-    p {
-      padding-left: 0.5em;
-    }
-  
-    .nav-links li, a {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+      } 
+}
 
+@media screen and (max-width: 992px) {
+    .pain {
+        width: 50%;
     }
+}
+
+@media screen and (max-width: 600px) {
 }
