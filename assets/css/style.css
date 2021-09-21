@@ -18,6 +18,7 @@ h2 {
     font-size: 180%;
     color: #FFB344;
     border-bottom: 3px solid #E05D5D;
+    text-align: start;
   }
 
 
@@ -47,6 +48,8 @@ header {
 }
 
 .nav-links {
+    display: flex;
+    float:center;
     margin-right: 20px;
     float: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -55,7 +58,6 @@ header {
 }
 
 .nav-links li, a {
-    display: inline-block;
     margin:10px;
     list-style-type: none;
     color:  #FFF8E5;
@@ -86,20 +88,21 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     padding-left: 20px;
-      }
+
+    }
       
 
 .products {
-    flex: 1 0 100%;
+    flex: 0 0 100%;
     color: var(--dark);
     padding-top: 0.5rem;
     padding:10px;
-    transition: flex-basis 500ms linear;
+
 }
 
 .pain {
     padding: 10px;
-    transition: flex-basis 500ms linear;
+
   }
 
 
@@ -108,9 +111,6 @@ header {
     margin-bottom: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-}
-.contact :hover {
-    text-decoration: underline #E05D5D;
 }
 
 .contact-bar ul .contact a {
@@ -123,9 +123,9 @@ header {
 }
 
 footer {
+    text-align: center;
     padding: 30px;
     clear: both;
-    text-align: center;
 }
 
 
@@ -136,26 +136,28 @@ footer {
     }
   
     h2 {
+        float:left;
         border-right: 3px solid #E05D5D;
         border-bottom: none;
         padding-top: 0;
         padding-right: 0.5rem;
     }
+
     .row {
         display:inline;
     }
+    .products {
+        float: right;
+        width: 25%;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .pain {
+        flex: wrap;
         width: 50%;
     }
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-      } 
+
 }
 
 @media screen and (min-width: 600px) {
