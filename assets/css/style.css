@@ -48,7 +48,7 @@ header {
 
 .nav-links {
     margin-right: 20px;
-    float: right;
+    float: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     color: #FFF8E5;
@@ -82,18 +82,17 @@ header {
 }
 
 .row {
-    display: inline;
+    display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     padding-left: 20px;
       }
       
 
 .products {
-    display:inline;
+    flex: 1 0 100%;
     color: var(--dark);
     padding-top: 0.5rem;
-    width:50%;
     padding:10px;
     transition: flex-basis 500ms linear;
 }
