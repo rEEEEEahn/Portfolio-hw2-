@@ -1,5 +1,6 @@
 :root{
 --dark: #34282C;
+--yellow: #FFB344;
 }
 body {
     font-size: 20px;
@@ -16,12 +17,23 @@ h1 {
 }
 h2 {
     font-size: 180%;
-    color: #FFB344;
+    color: var(--yellow);
     border-bottom: 3px solid #E05D5D;
     text-align: start;
   }
 
+.title {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+    background-color: #00A19D;
+    border: 1px solid #FFF8E5;
+}
 
+.pain :hover {
+    border: 5px solid #00A19D;
+    opacity:0.5;
+}
 
 header {
     padding: 30px 0px;
@@ -29,7 +41,7 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
     background-color: #00A19D;
-    color: #FFB344;
+    color: var(--yellow);
 }
 
 .section, .contact {
@@ -42,16 +54,14 @@ header {
     right:0;
     bottom: 50px;
     font-size: 32px;
-    color: #FFB344;
+    color: var(--yellow);
     width: 150px;
     padding:1px;
 }
 
 .nav-links {
     display: flex;
-    float:center;
     margin-right: 20px;
-    float: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     color: #FFF8E5;
@@ -89,18 +99,22 @@ header {
     flex-direction: row;
     padding-left: 20px;
 
+
     }
       
 
 .products {
-    flex: 0 0 100%;
+    flex: 1 0 100%;
+    flex-wrap:wrap;
     color: var(--dark);
     padding-top: 0.5rem;
     padding:10px;
+    transition: flex-basis 500ms linear;
 
 }
 
 .pain {
+    position: relative;
     padding: 10px;
 
   }
@@ -113,13 +127,15 @@ header {
     font-size: 20px;
 }
 
-.contact-bar ul .contact a {
-    display: inline;
-    list-style-type: none;
+.links {
     color: var(--dark);
     font-weight: bold;
     text-decoration: none;
-    float: center;
+}
+a:hover {
+    color: var(--yellow);
+    font-weight: bold;
+    text-decoration: underline #E05D5D;
 }
 
 footer {
@@ -150,10 +166,11 @@ footer {
         float: right;
         width: 25%;
     }
-}
 
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 768px) {
     .pain {
+        display:flex;
         flex: wrap;
         width: 50%;
     }
@@ -164,4 +181,5 @@ footer {
     .pain {
         width: 100%
     }
+
 }
