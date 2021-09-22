@@ -36,6 +36,7 @@ h2 {
 }
 
 header {
+    position: relative;
     padding: 30px 0px;
     font-size: 48px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
@@ -60,8 +61,7 @@ header {
 }
 
 .nav-links {
-    display: flex;
-    margin-right: 20px;
+    right: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     color: #FFF8E5;
@@ -98,33 +98,29 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     padding-left: 20px;
-
-
-    }
+}
       
 
 .products {
-    flex: 1 0 100%;
-    flex-wrap:wrap;
+    display:block;
+    flex: 0 0 25%;
     color: var(--dark);
     padding-top: 0.5rem;
     padding:10px;
-    transition: flex-basis 500ms linear;
-
 }
 
 .pain {
     position: relative;
-    padding: 10px;
-
+    width: 50%;
+    margin-left: 10%;
+    margin-bottom: 24px;
   }
 
-
-.contact {
+.contact-bar li {
     padding-top: 15px;
     margin-bottom: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .links {
@@ -144,6 +140,13 @@ footer {
     clear: both;
 }
 
+@media screen and (min-width: 768px) {
+    .products {
+        padding: 20px;
+        width: 100%;
+    }
+
+}
 
 
 @media screen and (min-width: 992px) {
@@ -159,27 +162,15 @@ footer {
         padding-right: 0.5rem;
     }
 
-    .row {
-        display:inline;
-    }
-    .products {
+    .nav-links a{
+        position: relative;
+        bottom: 10px;
         float: right;
-        width: 25%;
     }
 
-
-@media screen and (min-width: 768px) {
-    .pain {
-        display:flex;
-        flex: wrap;
-        width: 50%;
+    .contact-bar a{
+        position:absolute;
     }
 
 }
 
-@media screen and (min-width: 600px) {
-    .pain {
-        width: 100%
-    }
-
-}
