@@ -150,6 +150,12 @@ footer {
 
 
 @media screen and (min-width: 992px) {
+    .nav-links a{
+        position: relative;
+        bottom: 10px;
+        float: right;
+    }
+
     .section {
       display: flex;
     }
@@ -162,11 +168,6 @@ footer {
         padding-right: 0.5rem;
     }
 
-    .nav-links a{
-        position: relative;
-        bottom: 10px;
-        float: right;
-    }
 
     .contact-bar a{
         position:absolute;
